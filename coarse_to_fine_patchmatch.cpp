@@ -48,7 +48,7 @@ static void constructPyramid(const cv::Mat& img, std::vector<cv::Mat>& pyramid, 
 	img.copyTo(pyramid[0]);
 
 	const double sigma0 = (1 / ratio - 1);
-	const int n = nscales - 1;
+	const int n = static_cast<int>(log(0.25) / log(ratio));
 	for (int s = 1; s < nscales; s++)
 	{
 		const double sigma = s <= n ? s * sigma0 : n * sigma0;
