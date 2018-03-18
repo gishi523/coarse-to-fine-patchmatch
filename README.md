@@ -1,6 +1,8 @@
 # coarse-to-fine-patchmatch
 An implementation of Coarse-to-fine PatchMatch(CPM) Optical Flow
 
+<img src=https://github.com/gishi523/coarse-to-fine-patchmatch/wiki/images/image1.png width=420> <img src=https://github.com/gishi523/coarse-to-fine-patchmatch/wiki/images/flow.png width=420>
+
 ## Description
 - An implementation of Coarse-to-fine PatchMatch Optical Flow described in [1].
 - Re-implementation of original CPM(https://github.com/YinlinHu/CPM) for OpenCV.
