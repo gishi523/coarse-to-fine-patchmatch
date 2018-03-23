@@ -5,9 +5,9 @@
 #include <emmintrin.h>
 #endif
 
-const int NUM_NEIGHBORS = 8;
-const int NEIGHBOR_DX[NUM_NEIGHBORS] = { 0, 0, 1, -1, -1, -1, 1, 1 };
-const int NEIGHBOR_DY[NUM_NEIGHBORS] = { -1, 1, 0, 0, -1, 1, -1, 1 };
+static const int NUM_NEIGHBORS = 8;
+static const int NEIGHBOR_DX[NUM_NEIGHBORS] = { 0, 0, 1, -1, -1, -1, 1, 1 };
+static const int NEIGHBOR_DY[NUM_NEIGHBORS] = { -1, 1, 0, 0, -1, 1, -1, 1 };
 
 template <class T>
 static inline const T& clamp(const T& v, const T& lo, const T& hi)
@@ -429,7 +429,7 @@ private:
 	Parameters param_;
 };
 
-int crossCheck(const cv::Mat2f& seeds, const cv::Mat2f& flow1, const cv::Mat2f& flow2, std::vector<int>& valid,
+static int crossCheck(const cv::Mat2f& seeds, const cv::Mat2f& flow1, const cv::Mat2f& flow2, std::vector<int>& valid,
 	int w, int h, int step, int maxDisp, int checkThreshold, int borderWidth)
 {
 	const int nseeds = seeds.rows;
